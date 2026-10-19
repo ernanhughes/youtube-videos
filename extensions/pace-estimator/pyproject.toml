@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ytv-pace-estimator"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["youtube-videos-workflows>=0.1.0"]
+
+[project.entry-points."youtube_videos.plugins"]
+pace_estimator = "pace_estimator.plugin:PaceEstimator"
+
+[tool.setuptools.packages.find]
+where = ["."]

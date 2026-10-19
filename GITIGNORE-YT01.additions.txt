@@ -1,0 +1,9 @@
+# Overlay additions only. Keep the host repository's existing .gitignore.
+.venv/
+.ytv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/

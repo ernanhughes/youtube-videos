@@ -1,0 +1,1 @@
+"""Example external stage plugin."""

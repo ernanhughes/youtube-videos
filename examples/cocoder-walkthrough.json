@@ -1,0 +1,7 @@
+{
+  "schema": "cocoder.walkthrough.example.v1",
+  "steps": [
+    {"id": "create-producer", "description": "Explain how events are emitted", "status": "not_executed"},
+    {"id": "add-consumer", "description": "Explain subscriber behaviour", "status": "not_executed"}
+  ]
+}

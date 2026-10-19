@@ -1,0 +1,25 @@
+name: technical_lesson
+version: 1
+stages:
+  - id: ingest
+    plugin: hugo_ingest
+    needs: []
+  - id: plan
+    plugin: lesson_plan
+    needs: [ingest]
+  - id: evidence
+    plugin: evidence_map
+    needs: [ingest, plan]
+  - id: storyboard
+    plugin: storyboard
+    needs: [ingest, plan, evidence]
+  - id: cocoder
+    plugin: cocoder_adapter
+    needs: [storyboard]
+    optional: true
+  - id: approval
+    plugin: approval_gate
+    needs: [storyboard, evidence, cocoder]
+  - id: package
+    plugin: package_draft
+    needs: [approval]

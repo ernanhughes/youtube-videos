@@ -1,0 +1,18 @@
+defaults:
+  - workflow: technical_lesson
+  - events: local
+  - _self_
+
+paths:
+  workspace: .ytv
+plugins:
+  # Distribution/package names, never import paths; trust installed packages only.
+  allow_distributions: []
+  allow_external_ids: []
+limits:
+  max_chapter_bytes: 1048576
+  max_scenes: 35
+  max_events_per_run: 1000
+hydra:
+  job:
+    chdir: false
