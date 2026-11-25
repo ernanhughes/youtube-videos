@@ -27,5 +27,8 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 
+addopts = "-p aitest.pytest_plugin"
+aitest_enabled = true
+aitest_policy = "observe"
 [tool.setuptools.package-data]
 youtube_videos = ["conf/*.yaml", "conf/workflow/*.yaml", "conf/events/*.yaml"]
